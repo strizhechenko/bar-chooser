@@ -56,3 +56,16 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+## TODO
+
+- [x] prototype
+- [x] argparse
+- [x] submit a package in PYPI
+- [ ] tests
+- [ ] badges
+- [ ] config support
+- [ ] testing on linux
+- [ ] android app
+- [ ] iOS app
+- [ ] pr
