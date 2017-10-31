@@ -17,13 +17,8 @@ class BarChooser(object):
             print("{0}: {1}".format(key, bars[key]))
 
     def rate(self, bar_name, params):
-        score = 0
-        _bar = self.bars[bar_name]
-        _bar_data = dict(zip(self.keys, _bar))
-        for key in self.keys:
-            if params.get(key):
-                score += min(_bar_data[key], params[key])
-        return score
+        _bar_data = dict(zip(self.keys, self.bars[bar_name]))
+        return sum(min(_bar_data[key], params[key]) for key in self.keys if params.get(key))
 
     def __parse_args__(self):
         parser = argparse.ArgumentParser()
