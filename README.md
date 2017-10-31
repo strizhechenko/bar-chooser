@@ -1,4 +1,4 @@
-# bar-chooser
+# Bar-chooser
 
 The script that helps you to choose a bar to drink with someone.
 
