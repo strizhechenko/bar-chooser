@@ -1,8 +1,10 @@
-# Bar-chooser
+Bar-chooser
+===========
 
 The script that helps you to choose a bar to drink with someone.
 
-## Why?
+Why?
+----
 
 I spent too much time to choose a bar to go with different people:
 
@@ -15,49 +17,53 @@ I spent too much time to choose a bar to go with different people:
 
 And all these metrics should be combined to find a perfect place for a given booze.
 
-## Installation
+Installation
+------------
 
-``` shell
-pip install bar-chooser
-```
+.. code:: shell
+  
+  pip install bar-chooser
+
+Usage
+-----
+
+.. code:: shell
+  
+  $ bar-chooser --meat=2 --beer=1 --cheap=1 --at-work=1 --at-home=1
+  pan-smetan: 4
+  8500: 4
+  ratskeller: 3
+  new-bar: 3
+  peperonni: 3
+  yankee-bar: 3
+  jawsspot: 2
+  marusya: 2
+  misantrop: 2
 
 
-## Usage
-
-``` shell
-$ bar-chooser --meat=2 --beer=1 --cheap=1 --at-work=1 --at-home=1
-pan-smetan: 4
-8500: 4
-ratskeller: 3
-new-bar: 3
-peperonni: 3
-yankee-bar: 3
-jawsspot: 2
-marusya: 2
-misantrop: 2
-```
-
-## Customizing
+Customizing
+-----------
 
 Create your own utility based on BarChooser.
 
-``` python
-from bar_chooser import BarChooser
+.. code:: python
+  
+  from bar_chooser import BarChooser
 
-MY_KEYS = ['vodka', 'seledka']
-MY_BARS = {
-    'bar1': [2, 1],
-    'bar2': [0, 2],
-}
+  MY_KEYS = ['vodka', 'seledka']
+  MY_BARS = {
+      'bar1': [2, 1],
+      'bar2': [0, 2],
+  }
 
-def main():
-    BarChooser(MY_KEYS, MY_BARS)
+  def main():
+      BarChooser(MY_KEYS, MY_BARS)
 
-if __name__ == '__main__':
-    main()
-```
+  if __name__ == '__main__':
+      main()
 
-## TODO
+TODO
+----
 
 - [x] prototype
 - [x] argparse
