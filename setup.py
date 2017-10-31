@@ -2,8 +2,8 @@
 from setuptools import setup
 
 setup(
-    name='bar-pattern-matching',
-    version='0.0.1',
+    name='bar-chooser',
+    version='0.1.0',
     packages=['bar_chooser'],
     url='https://github.com/strizhechenko/bar-chooser',
     license='MIT',
