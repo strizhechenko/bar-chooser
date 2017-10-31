@@ -2,6 +2,19 @@
 
 Script that help you to choose a bar to drink with someone.
 
+## Why?
+
+I spent too much time to choose bar to go with different person:
+
+- One need vegan food
+- second wants to drink nice bear
+- third wants perfect steak
+- fourth has little money but want to drink a lot
+- I want to drink near my home
+- sometimes we need to meet somewhere at the city center
+
+And all these metrics should be combined to find a perfect place for given booze.
+
 ## Installation
 
 ``` shell
