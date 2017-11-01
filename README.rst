@@ -9,7 +9,7 @@ Why?
 I spent too much time to choose a bar to go with different people:
 
 - One need vegan food.
-- Second wants to drink nice bear.
+- Second wants to drink nice beer.
 - Third wants perfect steak.
 - Fourth has little money but want to drink a lot.
 - I want to drink near my home.
