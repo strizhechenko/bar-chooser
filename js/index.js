@@ -16,10 +16,26 @@ x = new Vue({
     }
 })
 
-function govno(expectations, ratings) {
-    return 0;
+function rate(expectations, ratings) {
+    var rating = 0;
+    for (var i = 0; i < expectations.length; i++) {
+        rating += Math.min(ratings[i], expectations[i]);
+    }
+    return rating;
 }
 
-for (var bar in x.$data['EKB_BARS']) {
-    console.log(bar, x.$data['EKB_BARS'][bar]);
+function get_expectations() {
+    return Array.from(document.getElementsByName("expected_rating")).map(function (a) {
+        return parseInt(a.value);
+    })
+}
+
+function rate_all() {
+    var expectations = get_expectations();
+    for (var bar in x.$data['EKB_BARS']) {
+        var ratings = x.$data['EKB_BARS'][bar];
+        var row = document.getElementById(bar);
+        var rating = row.children.namedItem("rating");
+        rating.textContent = rate(expectations, ratings);
+    }
 }

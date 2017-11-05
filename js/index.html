@@ -13,10 +13,10 @@
 <h1 align="center">Выбираем где пить в Екатеринбурге</h1>
 <div id="app">
     <table class="table table-striped" align="center">
-        <thead class="table-dark">
+        <thead class="table-dark" align="center">
         <td>Название бара</td>
-        <td align="center" v-for="key in OLEG_KEYS">{{ key.replace("_", " ") }}
-            <select class="custom-select bg-dark text-white">
+        <td v-for="(key, index) in OLEG_KEYS">{{ key.replace("_", " ") }}
+            <select :id=index class="custom-select bg-dark text-white" name="expected_rating">
                 <option>0</option>
                 <option>1</option>
                 <option>2</option>
@@ -25,17 +25,17 @@
         <td>Итог</td>
         </thead>
         <tbody>
-        <tr v-for="(ratings, bar) in EKB_BARS">
+        <tr v-for="(ratings, bar) in EKB_BARS" :id="bar">
             <td>{{bar}}</td>
             <td v-for="value in ratings" align="center">
                 {{value}}
             </td>
-            <td></td>
+            <td name="rating">0</td>
         </tr>
         </tbody>
     </table>
     <div align="center">
-        <button align="center" class="btn-success btn-lg">БУХАТЬ!</button>
+        <button align="center" class="btn-success btn-lg" onclick="rate_all()">БУХАТЬ!</button>
     </div>
 </div>
 <script src="index.js"></script>
