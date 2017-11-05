@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Выбрать бар в Екатеринбурге</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+<h1 align="center">Выбираем где пить в Екатеринбурге</h1>
+<div id="app">
+    <table class="table table-striped" align="center">
+        <thead class="table-dark" align="center">
+        <td>Название бара</td>
+        <td v-for="(key, index) in OLEG_KEYS">{{ key.replace("_", " ") }}
+            <select :id=index class="custom-select bg-dark text-white" name="expected_rating" onchange="rate_all()">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+            </select>
+        </td>
+        <td>Итог</td>
+        </thead>
+        <tbody>
+        <tr v-for="(ratings, bar) in EKB_BARS" :id="bar">
+            <td>{{bar}}</td>
+            <td v-for="value in ratings" align="center">
+                {{value}}
+            </td>
+            <td name="rating">0</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
