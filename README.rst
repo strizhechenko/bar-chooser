@@ -1,7 +1,7 @@
 Bar-chooser
 ===========
 
-The script that helps you to choose a bar to drink with someone.
+The script (`web-version`_) that helps you to choose a bar to drink with someone.
 
 Why?
 ----
@@ -68,6 +68,7 @@ TODO
 - [x] prototype
 - [x] argparse
 - [x] submit a package in PYPI
+- [x] `web-version`_
 - [ ] tests
 - [ ] badges
 - [ ] config support
@@ -75,3 +76,5 @@ TODO
 - [ ] android app
 - [ ] iOS app
 - [ ] pr
+
+.. _web-version: https://strizhechenko.github.io/bar-chooser/web/
