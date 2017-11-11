@@ -11,7 +11,7 @@ def read(*paths):
 
 setup(
     name='bar-chooser',
-    version='0.1.2',
+    version='0.1.3',
     packages=['bar_chooser'],
     url='https://github.com/strizhechenko/bar-chooser',
     license='MIT',

@@ -5,6 +5,14 @@ import argparse
 from bar_chooser.ekaterinburg import OLEG_KEYS, EKB_BARS
 
 
+class Bar(object):
+    def __init__(self, ratings):
+        self.params = dict(zip(OLEG_KEYS, ratings))
+
+    def rate(self, params):
+        return sum(min(self.params[key], params[key]) for key in self.params.keys() if params.get(key))
+
+
 class BarChooser(object):
     args = {}
 
@@ -12,13 +20,9 @@ class BarChooser(object):
         self.bars = bars
         self.keys = keys
         self.__parse_args__()
-        bars = dict((bar, self.rate(bar, self.args)) for bar in self.bars)
+        bars = dict((bar, Bar(bars[bar]).rate(self.args)) for bar in self.bars)
         for key in reversed(sorted(bars, key=bars.get)):
             print("{0}: {1}".format(key, bars[key]))
-
-    def rate(self, bar_name, params):
-        _bar_data = dict(zip(self.keys, self.bars[bar_name]))
-        return sum(min(_bar_data[key], params[key]) for key in self.keys if params.get(key))
 
     def __parse_args__(self):
         parser = argparse.ArgumentParser()
