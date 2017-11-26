@@ -2,7 +2,8 @@
 # coding=utf-8
 
 import argparse
-from bar_chooser.ekaterinburg import OLEG_KEYS, EKB_BARS
+from bar_chooser.ekaterinburg import EKB_BARS
+from bar_chooser.oleg import OLEG_KEYS
 
 
 class Bar(object):
